@@ -1,0 +1,9 @@
+import geopandas as gpd
+
+# Load the GeoJSON file
+geojson_file = r'location_of_the_file.json'
+gdf = gpd.read_file(geojson_file)
+
+# Save to a shapefile
+shapefile_path = r'location_of_the_file.shp'
+gdf.to_file(shapefile_path, driver='ESRI Shapefile')
